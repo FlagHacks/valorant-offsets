@@ -1,70 +1,76 @@
 namespace Offsets
 {
 
-uintptr_t oLevel = 0x38;
-
-uintptr_t oGameInstance = 0x1A8;
-
-uintptr_t oLocalPlayers = 0x40;
-
-uintptr_t oPlayerController = 0x38;
-
-uintptr_t oLocalPawn = 0x460;
-
-uintptr_t RootComp = 0x210 + 0x20;
-
-uintptr_t oCameraManager = 0x458 + 0x20;
-
-uintptr_t oCameraCache = 0x1220 + 0x20;
-
-uintptr_t ObjID = 0x18;
-
-uintptr_t Dormant = 0x120;
-
-uintptr_t IsDormant = 0x0D8;
-
-uintptr_t RelativeLocation = 0x164;
-
-uintptr_t RelativeRotation = 0x170;
-
-uintptr_t PlayerState = 0x3F0;
-
-uintptr_t Ping = 0x3B8;
-
-uintptr_t TeamComponent = 0x5A0;
-
-uintptr_t Team = 0xF8;
-
-uintptr_t DamageHandler = 0x9A0;
-
-uintptr_t Health = 0x1B0;
-
-uintptr_t Mesh = 0x410 + 0x20;
-
-uintptr_t StaticMesh = 0x558;
-
-uintptr_t StaticMesh_Cached = 0x568;
-
-uintptr_t ComponentToWorld = 0x250;
-
-uintptr_t UniqueID = 0x38;
-
-uintptr_t ControlRotation = 0x440;
-
-uintptr_t SpikeTimer = 0x4D4;
-
-uintptr_t BoneCount = 0x560;
-
-uintptr_t last_render_time = 0x350;
-
-uintptr_t last_submit_time = 0x358;
-
-uintptr_t Inventory = 0x948;
-
-uintptr_t CurrentWeapon = 0x218;
-
-uintptr_t OFF_WEAPONMESH1P = 0xc30;
-
-uintptr_t OFF_OVERRIDEMATERIALS = 0x4f8;
+constexpr uint64_t uworld_state = 0x8FB6940;
+  
+	constexpr uint64_t uworld_key = uworld_state + 0x38;
+	
+	constexpr uint64_t override_materials = 0x4f8;
+  
+	constexpr uint64_t game_instance = 0x1A8;
+  
+	constexpr uint64_t persistent_level = 0x38;
+  
+	constexpr uint64_t local_player_array = 0x40;
+  
+	constexpr uint64_t local_player_controller = 0x38;
+  
+	constexpr uint64_t local_player_pawn = 0x460;
+  
+	constexpr uint64_t control_rotation = 0x440;
+  
+	constexpr uint64_t camera_manager = 0x478;
+  
+	constexpr uint64_t camera_position = 0x1240;
+  
+	constexpr uint64_t camera_rotation = 0x124C;
+  
+	constexpr uint64_t camera_fov = 0x1258;
+  
+	constexpr uint64_t actor_array = 0xA0;
+  
+	constexpr uint64_t actor_count = 0xB8;
+  
+	constexpr uint64_t unique_id = 0x38;
+  
+	constexpr uint64_t mesh_component = 0x430;
+  
+	constexpr uint64_t last_render_time = 0x350;
+  
+	constexpr uint64_t last_submit_time = 0x358;
+  
+	constexpr uint64_t bone_array = 0x558;
+  
+	constexpr uint64_t bone_count = 0x560; // MAY BE OUTDATED
+  
+	constexpr uint64_t component_to_world = 0x250;
+  
+	constexpr uint64_t root_component = 0x230;
+  
+	constexpr uint64_t root_position = 0x164;
+  
+	constexpr uint64_t damage_handler = 0x998;
+  
+	constexpr uint64_t health = 0x1B0;
+  
+	constexpr uint64_t dormant = 0x120;
+  
+	constexpr uint64_t player_state = 0x3F0;
+  
+	constexpr uint64_t team_component = 0x5A0;
+  
+	constexpr uint64_t team_id = 0xF8;
+  
+	constexpr auto FresnelIntensity = 0x6B0;
+  
+	constexpr auto FresnelOffset = 0x694;
+  
+	constexpr auto CachedFresnelColor = 0x680;
+  
+	constexpr auto CachedFresnelOffset = 0x684;
+  
+	constexpr auto CachedFresnelIntensity = 0x688;
+  
+	constexpr auto CachedLocalFresnelOffset = 0x68c;
 
 };
